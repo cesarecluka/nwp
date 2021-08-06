@@ -1,0 +1,37 @@
+.grid-2{
+  display: grid; display: -ms-grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid-3{
+  display: grid; display: -ms-grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-4{
+  display: grid; display: -ms-grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-5{
+  display: grid; display: -ms-grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.grid-6{
+  display: grid; display: -ms-grid;
+  grid-template-columns: repeat(6, 1fr);
+}
+
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.flex-column{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+

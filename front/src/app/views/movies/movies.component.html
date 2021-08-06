@@ -1,0 +1,23 @@
+<main>
+
+  <app-movies-trending ></app-movies-trending>
+
+
+  <ul class="dropdown-menu dropdown-menu-macos mx-0 shadow" style="width: 220px;">
+    <li (click)="removeGenre()">
+      <a class="dropdown-item" [ngClass]="current_genre == '' ? 'active' : ''" >All</a>
+    </li>
+    <li *ngFor="let genre of genres" (click)="changeGenre(genre)">
+      <a class="dropdown-item" [ngClass]="genre == current_genre ? 'active' : ''" >{{genre}}</a>
+    </li>
+  </ul>
+
+  <div class="container marketing mt-5 grid-3">
+
+    <app-movie-item *ngFor="let movie of movies" [movie]="movie">
+
+    </app-movie-item>
+
+  </div>
+
+</main>

@@ -1,0 +1,34 @@
+<div class="container register-form">
+  <div class="form">
+      <div class="note">
+          <p>Sign up</p>
+      </div>
+
+      <form class="form-content" (ngSubmit)="onSubmit()">
+
+        <p class="error"> {{error}} </p>
+
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="Username*" value=""/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="email" [(ngModel)]="email" class="form-control" placeholder="Email*" value=""/>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <input type="text" name="password" [(ngModel)]="password" class="form-control" placeholder="Password*" value=""/>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="password_confirm" [(ngModel)]="password_confirm" class="form-control" placeholder="Confirm Password *" value=""/>
+                </div>
+            </div>
+
+            <input type="submit" class="btnSubmit" value="Submit">
+        </div>
+
+      </form>
+  </div>
+</div>
