@@ -4,19 +4,24 @@
           <p>Login</p>
       </div>
 
-      <div class="form-content">
+      <form class="form-content" (ngSubmit)="onSubmit()">
+
+          <p class="error"> {{error}} </p>
+
           <div class="row">
               <div class="col-md-8">
                   <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Username*" value=""/>
+                      <input type="text" name="username" [(ngModel)]="username" class="form-control" placeholder="Username*" value=""/>
+                  </div>
               </div>
               <div class="col-md-8">
                   <div class="form-group">
-                      <input type="text" class="form-control" placeholder="Password*" value=""/>
+                      <input type="text" name="password" [(ngModel)]="password" class="form-control" placeholder="Password*" value=""/>
                   </div>
               </div>
           </div>
-          <button type="button" class="btnSubmit">Submit</button>
-      </div>
+
+          <input type="submit" class="btnSubmit" value="Login">
+      </form>
   </div>
 </div>

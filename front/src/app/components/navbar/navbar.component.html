@@ -1,19 +1,19 @@
 <div>
   <header class="d-flex flex-wrap align-items-center justify-content-center justify-content-md-between py-3 px-5 mb-4 border-bottom">
-    <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
-      <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"/></svg>
-    </a>
+    <h2>Movies.ts</h2>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-      <li><a href="#" class="nav-link px-2 link-secondary">Home</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">About</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Reviews</a></li>
-      <li><a href="#" class="nav-link px-2 link-dark">Contact</a></li>
+      <li><a routerLink="/" class="nav-link px-2 link-dark" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Home</a></li>
+      <li><a routerLink="/about" class="nav-link px-2 link-dark" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">About</a></li>
+      <li><a routerLink="/reviews" class="nav-link px-2 link-dark" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Reviews</a></li>
+      <li><a routerLink="/contact" class="nav-link px-2 link-dark" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">Contact</a></li>
     </ul>
 
     <div class="col-md-3 text-end">
-      <button type="button" class="btn btn-outline-primary me-2">Login</button>
-      <button type="button" class="btn btn-primary">Sign-up</button>
+      <a *ngIf="!isLoggedIn()" type="button" routerLink="/login" class="btn btn-outline-primary me-2">Login</a>
+      <a *ngIf="!isLoggedIn()" type="button" routerLink="/register" class="btn btn-primary">Sign-up</a>
+      <a *ngIf="isAdmin()" routerLink="/add-movie" class="btn btn-outline-primary me-2">Add movie</a>
+      <a *ngIf="isLoggedIn()" type="button" (click)="onLogout()" class="btn btn-primary">Sign-out</a>
     </div>
   </header>
 </div>

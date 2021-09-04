@@ -1,0 +1,24 @@
+<div class="review-item container" *ngIf="review !== undefined">
+
+  <p class="release-date">{{ review.created_at }}</p>
+
+  <h2>{{ review.title }}</h2>
+
+  <a class="movie" routerLink="/movie/{{movie.id}}" *ngIf="movie !== undefined" >{{ movie.title }} - {{ movie.genre }}</a>
+
+  <p class="author" *ngIf="user !== undefined">Author: {{ user.username }}</p>
+
+  <p class="review-text">{{ review.text }}</p>
+
+  <a class="btn btn-lg btn-primary" routerLink="/movie/{{review.movie_id}}">Watch movie &raquo;</a>
+
+  <h3>Comments</h3>
+
+  <hr>
+
+  <app-comments class="comments" [id]="review.id" [isReview]="true">
+
+  </app-comments>
+
+</div>
+

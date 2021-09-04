@@ -1,0 +1,40 @@
+.movie{
+  margin-top: 2.5rem;
+  min-height: calc(100vh - 5rem);
+  padding-bottom: 3rem;
+
+  h1{
+    font-size: 2rem;
+    margin: 0;
+  }
+
+  .release-date{
+    font-size: 1.1rem;
+    color: rgb(128, 128, 128);
+    margin: 0 0 0.5rem 0;
+  }
+
+  img{
+    height: 40vh;
+  }
+
+  .director, .stars{
+    font-size: 1.1rem;
+    margin: 0;
+    color: rgb(128, 128, 128);
+    font-size: 1rem;
+  }
+
+  .description{
+    font-size: 1.2rem;
+  }
+
+  h3{
+    margin-top: 2rem;
+  }
+
+
+  .comments{
+    width: 40%;
+  }
+}

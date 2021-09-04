@@ -1,0 +1,17 @@
+<div class="comments flex-column" *ngIf="comments !== undefined">
+
+  <form class="flex-column" (ngSubmit)="addComment()">
+    <h4>Leave a comment</h4>
+
+    <p class="error">{{error}}</p>
+
+    <textarea name="text" [(ngModel)]="text" rows="3" placeholder="Comment..." maxlength="500"></textarea>
+
+    <input type="submit" class="btnSubmit" value="Comment">
+  </form>
+
+  <app-comment-item class="comment-item" *ngFor="let comment of comments" [comment]="comment" (deletedComment)="updateComments()">
+
+  </app-comment-item>
+
+</div>

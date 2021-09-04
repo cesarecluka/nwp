@@ -1,0 +1,68 @@
+<div class="add-movie container">
+
+  <h2>Add a movie</h2>
+
+  <hr>
+
+  <form class="flex-column" (ngSubmit)="addMovie()">
+
+    <p class="error">{{error}}</p>
+
+    <div class="row">
+      <div class="col-md-4">
+        <label for="title">Name</label>
+        <input type="text" class="form-control" name="title" [(ngModel)]="title" placeholder="Enter movie name" value="">
+      </div>
+
+      <div class="col-md-4">
+        <label for="genre">Genre</label>
+        <input type="text" class="form-control" name="genre" [(ngModel)]="genre" placeholder="Enter movie genre" value="">
+      </div>
+
+      <div class="col-md-4">
+        <label for="director">Director</label>
+        <input type="text" class="form-control" name="director" [(ngModel)]="director" placeholder="Enter movie director" value="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-10">
+        <label for="stars">Stars</label>
+        <input type="text" class="form-control" name="stars" [(ngModel)]="stars" placeholder="Enter movie stars" value="">
+      </div>
+
+      <div class="col-md-2">
+        <label for="releaseDate">Release year</label>
+        <input type="text" class="form-control" name="releaseDate" [(ngModel)]="releaseDate" placeholder="Enter year of release" value="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label for="imgUrl">Image</label>
+        <input type="text" class="form-control" name="imgUrl" [(ngModel)]="imgUrl" placeholder="Enter image URL" value="">
+      </div>
+
+      <div class="col-md-6">
+        <label for="videoUrl">Video</label>
+        <input type="text" class="form-control" name="videoUrl" [(ngModel)]="videoUrl" placeholder="Enter video URL" value="">
+      </div>
+    </div>
+
+    <div class="row">
+      <div >
+        <label for="description">Description</label>
+        <textarea rows="8" type="textarea" class="form-control" name="description" [(ngModel)]="description" placeholder="Enter movie description" value=""></textarea>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label for="title">Trending</label>
+      <input type="checkbox" class="trending" name="trending" [(ngModel)]="trending" >
+    </div>
+
+    <input type="submit" class="btn btn-primary" value="Add">
+
+  </form>
+
+</div>

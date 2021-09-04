@@ -70,9 +70,32 @@ class MoviesController extends Controller
         $movie = Movie::findOrFail($id);
 
         if($movie){
-            return new ResourcesMovie($movie);
+            return $movie;
         }else{
             return response()->json('Not found', 501);
+        }
+    }
+
+
+
+    public function create(Request $request)
+    {
+        $new_movie = [];
+        $new_movie["title"]= $request->title;
+        $new_movie["genre"] = $request->genre;
+        $new_movie["director"] = $request->director;
+        $new_movie["stars"] = $request->stars;
+        $new_movie["release_date"] = $request->release_date;
+        $new_movie["img_url"] = $request->img_url;
+        $new_movie["video_url"] = $request->video_url;
+        $new_movie["description"] = $request->description;
+
+        $movie = Movie::create($new_movie);
+
+        if($movie){
+            return $movie;
+        }else{
+            return response()->json('Error', 501);
         }
     }
 }

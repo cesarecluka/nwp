@@ -1,5 +1,5 @@
 export interface Review{
-  id? : number;
+  id : number;
   title : string;
   movie_id : number;
   user_id : number;

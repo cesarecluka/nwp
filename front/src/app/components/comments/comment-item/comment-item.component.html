@@ -1,0 +1,26 @@
+<div class="comment-item flex-column" *ngIf="user !== undefined">
+
+  <div class="top flex-row">
+    <div class="top-left flex-row">
+      <p class="comment-user">{{user.username}}</p >
+
+      <p class="comment-date">{{date}}</p>
+    </div>
+    <div class="top-right flex-row">
+      <a class="edit" *ngIf="canEdit" (click)="showEdit()" >Edit</a>
+
+      <a class="delete" *ngIf="canDelete" (click)="delete()" >Delete</a>
+    </div>
+  </div>
+
+  <p class="bottom" >{{comment.text}}</p>
+
+  <form class="edit-form flex-row" *ngIf="!hideEdit" (ngSubmit)="edit()">
+    <p class="error">{{error}}</p>
+
+    <textarea name="editText" [(ngModel)]="editText" rows="3" placeholder="Edit comment..." maxlength="500"></textarea>
+
+    <input type="submit" class="btnSubmit" value="Edit">
+  </form>
+
+</div>

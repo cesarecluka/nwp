@@ -13,7 +13,7 @@
           <h2> {{trending1.title}} </h2>
           <p class="genre"> {{trending1.genre}} </p>
           <p class="description"> {{trending1.description}} </p>
-          <p><a class="btn btn-lg btn-primary" href="#">Watch</a></p>
+          <p><a routerLink="/movie/{{trending1.id}}" class="btn btn-lg btn-primary" >Watch</a></p>
         </div>
         <img  width="250" height="250" src="{{trending1.img_url}}" alt="">
       </div>
@@ -25,7 +25,7 @@
           <h2> {{trending2.title}} </h2>
           <p class="genre"> {{trending2.genre}} </p>
           <p class="description"> {{trending2.description}} </p>
-          <p><a class="btn btn-lg btn-primary" href="#">Watch</a></p>
+          <p><a routerLink="/movie/{{trending2.id}}" class="btn btn-lg btn-primary">Watch</a></p>
         </div>
         <img  width="250" height="250" src="{{trending2.img_url}}" alt="">
       </div>
@@ -37,7 +37,7 @@
           <h2> {{trending3.title}} </h2>
           <p class="genre"> {{trending3.genre}} </p>
           <p class="description"> {{trending3.description}} </p>
-          <p><a class="btn btn-lg btn-primary" href="#">Watch</a></p>
+          <p><a routerLink="/movie/{{trending3.id}}" class="btn btn-lg btn-primary">Watch</a></p>
         </div>
         <img  width="250" height="250" src="{{trending3.img_url}}" alt="">
       </div>

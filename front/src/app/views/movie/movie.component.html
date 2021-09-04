@@ -1,0 +1,29 @@
+<div class="movie container" *ngIf="movie !== undefined">
+
+  <h1>{{ movie.title }}</h1>
+
+  <p class="release-date">Released: {{ movie.release_date }}</p>
+
+  <img src="{{movie.img_url}}" alt="{{movie.title}} image">
+
+  <p class="director">Director: {{ movie.director }}</p>
+
+  <p class="stars">Starring: {{ movie.stars }}</p>
+
+  <p class="description">{{ movie.description }}</p>
+
+  <h3>Watch</h3>
+
+  <hr>
+
+  <iframe width="420" height="315"  [src]="video_url"></iframe>
+
+  <h3>Comments</h3>
+
+  <hr>
+
+  <app-comments class="comments" [id]="movie.id" [isReview]="false">
+
+  </app-comments>
+
+</div>

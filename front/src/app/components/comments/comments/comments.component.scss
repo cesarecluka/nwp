@@ -1,0 +1,40 @@
+.comments{
+  width: 100%;
+
+  .comment-item{
+    width: 100%;
+  }
+
+  form{
+    width: 30%;
+    align-self: flex-start;
+    align-items: flex-start;
+    border-radius: 10px;
+    margin-bottom: 3rem;
+
+    textarea{
+      width: 100%;
+      border-color: #ccc;
+    }
+
+    textarea::placeholder{
+      color: rgb(138, 138, 138);
+    }
+
+    .btnSubmit{
+      align-self: flex-end;
+      border:none;
+      border-radius:1.5rem;
+      margin-top: 2rem;
+      padding: 2%;
+      width: auto;
+      cursor: pointer;
+      background: #0d6efd;
+      color: #fff;
+    }
+
+    .error{
+    color: red;
+    }
+  }
+}

@@ -1,0 +1,18 @@
+.add-review{
+  margin-top: 3rem;
+  min-height: calc(100vh - 5rem);
+  padding-bottom: 3rem;
+
+  form{
+    align-items: flex-start;
+  }
+
+  .form-group{
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+
+  .btn{
+    align-self: flex-end;
+  }
+}

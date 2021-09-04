@@ -1,0 +1,17 @@
+<div class="review-item flex-column"  *ngIf="review !== undefined">
+
+  <p class="date">{{ review.created_at }}</p>
+
+  <h2>{{ review.title }}</h2>
+
+  <a class="movie" routerLink="/movie/{{movie.id}}" *ngIf="movie !== undefined">{{ movie.title }} - {{ movie.genre }}</a>
+
+  <p class="author" *ngIf="user !== undefined">Author: {{ user.username }}</p>
+
+  <p class="review-text">{{ review.text }}</p>
+
+  <a class="btn btn-lg btn-primary" routerLink="/review/{{review.id}}">Read more</a>
+
+  <hr>
+
+</div>

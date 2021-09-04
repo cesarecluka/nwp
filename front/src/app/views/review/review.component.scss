@@ -1,0 +1,43 @@
+.review-item{
+  align-items: flex-start;
+  margin-top: 3rem;
+  width: 100%;
+  min-height: calc(100vh - 5rem);
+  padding-bottom: 3rem;
+
+  .release-date{
+    align-self: flex-end;
+    color: rgb(128, 128, 128);
+    margin: 0;
+  }
+
+  .movie{
+    font-size: 1.1rem;
+    color: rgb(128, 128, 128);
+    text-decoration: none;
+  }
+
+  .movie:hover{
+    text-decoration: underline;
+  }
+
+  .author{
+    font-size: 1.1rem;
+    color: rgb(128, 128, 128);
+  }
+
+  .btn{
+    align-self: flex-end;
+    padding: 0 0.5rem;
+    height: 2rem;
+    line-height: 2rem;
+  }
+
+  h3{
+    margin-top: 2rem;
+  }
+
+  .comments{
+    width: 40%;
+  }
+}

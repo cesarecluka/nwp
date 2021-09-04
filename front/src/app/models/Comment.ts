@@ -1,9 +1,9 @@
 export interface Comment{
-  id? : number;
+  id : number;
   text : string;
   user_id : number;
-  post_id? : number;
-  review_id? : number;
+  movie_id : number;
+  review_id : number;
   created_at : Date;
 }
 

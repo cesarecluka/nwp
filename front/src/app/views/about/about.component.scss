@@ -1,0 +1,54 @@
+.about{
+  min-height: calc(100vh - 5rem);
+  padding-bottom: 3rem;
+}
+
+header{
+  justify-content: center;
+  align-items: flex-start;
+  background-color: rgb(74, 124, 126);
+  color: #f4f4f4;
+  width: 100%;
+  height: 15vh;
+
+  h1{
+    margin-left: 20%;
+    font-size: 2rem;
+  }
+
+  h2{
+    margin-left: 20%;
+    font-size: 2.5rem;
+  }
+}
+
+
+main{
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 5rem;
+
+  h3{
+    margin-bottom: 2rem;
+    width: 60%;
+    margin-left: 20%;
+    font-size: 1.5rem;
+  }
+
+  p{
+    width: 60%;
+    margin-left: 20%;
+    font-size: 1.1rem;
+  }
+
+  .btn{
+    margin-top: 1rem;
+    background-color: rgb(74, 124, 126);
+    border-color: rgb(74, 124, 126);
+  }
+
+  .btn:hover{
+    background-color: rgb(58, 99, 100);
+    border-color: rgb(58, 99, 100);
+  }
+}

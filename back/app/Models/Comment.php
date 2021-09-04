@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Comment extends Model
 {
+    public $timestamps = false;
 
     /**
      * The attributes that are mass assignable.
@@ -13,7 +14,7 @@ class Comment extends Model
      * @var array
      */
     protected $fillable = [
-        'text', 'user_id', 'post_id', 'review_id', 'created_at'
+        'text', 'user_id', 'movie_id', 'review_id', 'created_at'
     ];
 
 

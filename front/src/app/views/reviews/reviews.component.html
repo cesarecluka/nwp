@@ -1,1 +1,28 @@
-<p>reviews works!</p>
+<div class="reviews">
+
+  <header class="flex-column">
+
+    <h2>Write a review about your favorite(or least favorite) movie!</h2>
+
+    <p><a class="btn btn-lg btn-primary" routerLink="/add-review">Start writing</a></p>
+
+  </header>
+
+  <main class="flex-column">
+
+    <form class="form-content flex-row" (ngSubmit)="onSearch()">
+      <input type="text" placeholder="Movie name" name="search_term" [(ngModel)]="search_term">
+      <input type="submit" class="btn-submit" value="Search reviews">
+    </form>
+
+    <div class="review-items container flex-column">
+
+      <app-review-item *ngFor="let review of reviews" [review]="review">
+
+      </app-review-item>
+
+    </div>
+
+  </main>
+
+</div>
